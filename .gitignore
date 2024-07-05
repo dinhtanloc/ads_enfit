@@ -8,3 +8,4 @@ __pycache__
 *.json
 competition.cpython-310-x86_64-linux-gnu.so
 __init__.py
+*.npz
