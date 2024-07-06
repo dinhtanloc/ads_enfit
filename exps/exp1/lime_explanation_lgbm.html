@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divADZJH90ZU4164JV"></div>
+        <div class="lime top_div" id="top_divR2E2P38K92O4Y2R"></div>
         
         <script>
-        var top_div = d3.select('#top_divADZJH90ZU4164JV').classed('lime top_div', true);
+        var top_div = d3.select('#top_divR2E2P38K92O4Y2R').classed('lime top_div', true);
         
         
                     var pp_div = top_div.append('div')
                                         .classed('lime predicted_value', true);
                     var pp_svg = pp_div.append('svg').style('width', '100%');
-                    var pp = new lime.PredictedValue(pp_svg, -0.3282896888310037, -0.3747323994854929, 9.925964963254389);
+                    var pp = new lime.PredictedValue(pp_svg, -0.3282896888310037, -0.38695241353622245, 9.656375909701145);
                     
         var exp_div;
             var exp = new lime.Explanation(["negative", "positive"]);
         
             exp_div = top_div.append('div').classed('lime explanation', true);
-            exp.show([["installed_capacity <= -0.48", -0.5414340039468566], ["is_consumption <= 0.00", -0.3174222592804951], ["hours_ahead_fl <= -0.01", 0.2536217306684268], ["is_business <= 0.00", -0.13835785336844442], ["34.00 < segment <= 71.00", 0.08461847641995246], ["33.00 < prediction_unit_id <= 51.00", -0.06961450256870107], ["10_metre_u_wind_component_fl_7d <= -0.72", -0.06920003716876433], ["data_block_id > 382.00", 0.06575758084398159], ["snowfall_fl > -0.33", -0.05520184076193524], ["surface_solar_radiation_downwards <= -0.93", 0.04747447166562935]], 1, exp_div);
+            exp.show([["installed_capacity <= -0.48", -0.5063879735925301], ["is_consumption <= 0.00", -0.26499772266386723], ["is_business <= 0.00", -0.1441290545660286], ["34.00 < segment <= 71.00", 0.08849400045373997], ["direct_solar_radiation_fl_7d <= -0.92", -0.06200575312904808], ["surface_solar_radiation_downwards <= -0.93", -0.054081942622269515], ["-0.58 < total_precipitation_fl_7d <= -0.44", -0.04904173201723719], ["hours_ahead_fl <= -0.01", -0.04882600970907187], ["snowfall_fl > -0.33", -0.04559998295461398], ["winddirection_10m_hl_7d > 0.65", -0.04158582913176951]], 1, exp_div);
             
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["installed_capacity", "-0.54", -0.5414340039468566], ["is_consumption", "0.00", -0.3174222592804951], ["hours_ahead_fl", "-0.01", 0.2536217306684268], ["is_business", "0.00", -0.13835785336844442], ["segment", "40.00", 0.08461847641995246], ["prediction_unit_id", "50.00", -0.06961450256870107], ["10_metre_u_wind_component_fl_7d", "-1.06", -0.06920003716876433], ["data_block_id", "466.00", 0.06575758084398159], ["snowfall_fl", "-0.18", -0.05520184076193524], ["surface_solar_radiation_downwards", "-1.16", 0.04747447166562935]], 1, raw_div);
+            exp.show_raw_tabular([["installed_capacity", "-0.54", -0.5063879735925301], ["is_consumption", "0.00", -0.26499772266386723], ["is_business", "0.00", -0.1441290545660286], ["segment", "40.00", 0.08849400045373997], ["direct_solar_radiation_fl_7d", "-1.06", -0.06200575312904808], ["surface_solar_radiation_downwards", "-1.16", -0.054081942622269515], ["total_precipitation_fl_7d", "-0.52", -0.04904173201723719], ["hours_ahead_fl", "-0.01", -0.04882600970907187], ["snowfall_fl", "-0.18", -0.04559998295461398], ["winddirection_10m_hl_7d", "1.33", -0.04158582913176951]], 1, raw_div);
         
         </script>
         </body></html>
