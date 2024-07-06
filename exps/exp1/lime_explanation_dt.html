@@ -37089,25 +37089,25 @@
 /***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map </script></head><body>
-        <div class="lime top_div" id="top_divTEOP8ZB1NACG6PZ"></div>
+        <div class="lime top_div" id="top_divRPVFFP8STR1WWOT"></div>
         
         <script>
-        var top_div = d3.select('#top_divTEOP8ZB1NACG6PZ').classed('lime top_div', true);
+        var top_div = d3.select('#top_divRPVFFP8STR1WWOT').classed('lime top_div', true);
         
         
                     var pp_div = top_div.append('div')
                                         .classed('lime predicted_value', true);
                     var pp_svg = pp_div.append('svg').style('width', '100%');
-                    var pp = new lime.PredictedValue(pp_svg, -0.32338321322132196, -0.3234167669703711, 10.897940313393054);
+                    var pp = new lime.PredictedValue(pp_svg, -0.32338321322132196, -0.3234167669703711, 10.952044891971862);
                     
         var exp_div;
             var exp = new lime.Explanation(["negative", "positive"]);
         
             exp_div = top_div.append('div').classed('lime explanation', true);
-            exp.show([["installed_capacity <= -0.48", -0.6849550435728465], ["is_consumption <= 0.00", -0.1837195514792352], ["is_business <= 0.00", -0.14344510734097574], ["surface_solar_radiation_downwards_fl_7d <= -0.90", 0.13859017550039962], ["direct_solar_radiation_fl_7d <= -0.92", -0.1329645253166279], ["34.00 < segment <= 71.00", 0.11152963960466046], ["-0.94 < cloudcover_mid_fl_7d <= -0.28", 0.09169235736647381], ["cloudcover_high_fl_7d <= -0.94", 0.07760317330629649], ["-0.75 < sin(dayofyear) <= 0.09", 0.0758241342654911], ["hours_ahead_fl <= -0.01", 0.06092823759402856]], 1, exp_div);
+            exp.show([["installed_capacity <= -0.48", -0.6620963456664843], ["is_consumption <= 0.00", -0.21158719906558468], ["hours_ahead_fd_7d <= -0.09", 0.15389130167515594], ["is_business <= 0.00", -0.12203941434500629], ["-0.94 < cloudcover_mid_fl_7d <= -0.28", -0.09452334841769681], ["-0.86 < cloudcover_high_fd_7d <= -0.13", 0.08661122398026007], ["dewpoint_hd_7d <= -0.60", -0.0844924722471003], ["dewpoint_hl_7d <= -0.57", 0.08046885553963014], ["34.00 < segment <= 71.00", 0.07747514363781333], ["0.14 < highest_price_per_mwh <= 0.95", -0.06840718211117072]], 1, exp_div);
             
         var raw_div = top_div.append('div');
-            exp.show_raw_tabular([["installed_capacity", "-0.54", -0.6849550435728465], ["is_consumption", "0.00", -0.1837195514792352], ["is_business", "0.00", -0.14344510734097574], ["surface_solar_radiation_downwards_fl_7d", "-1.10", 0.13859017550039962], ["direct_solar_radiation_fl_7d", "-1.06", -0.1329645253166279], ["segment", "40.00", 0.11152963960466046], ["cloudcover_mid_fl_7d", "-0.85", 0.09169235736647381], ["cloudcover_high_fl_7d", "-1.32", 0.07760317330629649], ["sin(dayofyear)", "-0.35", 0.0758241342654911], ["hours_ahead_fl", "-0.01", 0.06092823759402856]], 1, raw_div);
+            exp.show_raw_tabular([["installed_capacity", "-0.54", -0.6620963456664843], ["is_consumption", "0.00", -0.21158719906558468], ["hours_ahead_fd_7d", "-0.09", 0.15389130167515594], ["is_business", "0.00", -0.12203941434500629], ["cloudcover_mid_fl_7d", "-0.85", -0.09452334841769681], ["cloudcover_high_fd_7d", "-0.83", 0.08661122398026007], ["dewpoint_hd_7d", "-1.37", -0.0844924722471003], ["dewpoint_hl_7d", "-1.74", 0.08046885553963014], ["segment", "40.00", 0.07747514363781333], ["highest_price_per_mwh", "0.74", -0.06840718211117072]], 1, raw_div);
         
         </script>
         </body></html>
