@@ -11,3 +11,4 @@ __init__.py
 *.npz
 *.joblib
 *.html
+.conda
