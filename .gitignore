@@ -12,3 +12,5 @@ __init__.py
 *.joblib
 *.html
 .conda
+*.hdf5
+wandb
