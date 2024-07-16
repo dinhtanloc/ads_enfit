@@ -14,3 +14,4 @@ __init__.py
 .conda
 *.hdf5
 wandb
+*.h5
