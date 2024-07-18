@@ -28,7 +28,7 @@ warnings.filterwarnings('ignore')
 # import dask.dataframe as dd
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import GRU, Dense, Dropout, LSTM
+from tensorflow.keras.layers import GRU, Dense, Dropout, LSTM, BatchNormalization
 from tensorflow.keras.optimizers import Adam
 
 import tensorflow as tf

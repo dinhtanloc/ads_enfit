@@ -16,6 +16,7 @@ data_dir    = os.path.join(root_dir, "data").replace("\\", "/")
 # dataset_dir = os.path.join(data_dir, "datasets").replace("\\", "/")
 exps_dir     = os.path.join(root_dir, "exps").replace("\\", "/")
 prj_dir     = os.path.join(root_dir, "prj").replace("\\", "/")
+style_dir     = os.path.join(root_dir, "styles").replace("\\", "/")
 
 # path of module
 models_dir     = os.path.join(root_dir, "models").replace("\\", "/")
