@@ -12,7 +12,7 @@ for lib in include_dirs:
 # np.set_printoptions(precision=2, suppress=True, formatter={'float': '{: 0.4f}'.format}, linewidth=1000)
 
 # common info of project
-data_dir    = os.path.join(root_dir, "data").replace("\\", "/")
+data_dir    = os.path.join(root_dir, "data",'energy')
 # dataset_dir = os.path.join(data_dir, "datasets").replace("\\", "/")
 exps_dir     = os.path.join(root_dir, "exps").replace("\\", "/")
 prj_dir     = os.path.join(root_dir, "prj").replace("\\", "/")
