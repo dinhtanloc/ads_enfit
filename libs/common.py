@@ -1,7 +1,7 @@
 import pandas as pd
 # import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import KFold, cross_val_score, train_test_split
+from sklearn.model_selection import KFold, cross_val_score, train_test_split, GridSearchCV
 from sklearn.metrics import make_scorer, mean_absolute_error, r2_score
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.svm import SVR
@@ -37,6 +37,7 @@ from tensorflow.keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Global
 
 
 import lightgbm as lgb
+import xgboost as xgb
 from catboost import CatBoostRegressor
 import os, glob
 import json

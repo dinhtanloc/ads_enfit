@@ -1,5 +1,6 @@
 # config root dir, library path
 import os, sys
+seed=7
 __script_path=os.path.abspath(globals().get('__file__','.'))
 __script_dir = os.path.dirname(__script_path)
 root_dir = os.path.abspath(os.path.dirname(f'{__script_dir}')).replace("\\", "/")
