@@ -3,12 +3,13 @@ from keras_applications import imagenet_utils
 from keras import layers
 from tensorflow.keras.models import Model
 from keras_applications.imagenet_utils import _obtain_input_shape, decode_predictions
-from tensorflow.keras.layers import Conv1D, MaxPooling1D, GlobalAveragePooling1D, GlobalMaxPooling1D, Dense, Flatten, Input, LSTM, Dense, Dropout, BatchNormalization
+from tensorflow.keras.layers import Conv1D, MaxPooling1D, GlobalAveragePooling1D, GlobalMaxPooling1D, Dense, Flatten, Input, LSTM, Dense, Dropout, BatchNormalization, GRU
 from keras.applications import InceptionV3, ResNet50, VGG16
+from tensorflow.keras.optimizers import Adam
 
 
 class VGG16:
-    def __init__(self, input_shape, filter_size, kernel_size=3 ):
+    def __init__(self, input_shape, filter_size=32, kernel_size=3 ):
         self.features=None
         self.input_shape=input_shape
         self.filter_size=filter_size
@@ -59,9 +60,10 @@ class VGG16:
         return model
 
 class LSTM_model:
-    def __init__(self, input_shape):
+    def __init__(self, input_shape, activation='relu'):
         self.features=None
         self.input_shape=input_shape
+        self.activation=activation
         self.model=self.build_models()
 
 
@@ -69,19 +71,19 @@ class LSTM_model:
     def build_models(self):
         inputs = Input(shape=self.input_shape)
         x = LSTM(units=128)(inputs)  # Adjust units and other parameters as needed
+        x = Dropout(0.6)(x)
+        x = Dense(units=96, activation=self.activation)(x)
+        x = Dropout(0.6)(x)
+        x = Dense(units=64, activation=self.activation)(x)
         x = Dropout(0.4)(x)
-        x = Dense(units=96, activation='relu')(x)
-        x = Dropout(0.5)(x)
-        x = Dense(units=64, activation='relu')(x)
-        x = Dropout(0.5)(x)
-        self.features = Dense(units=32, activation='relu')(x)
-        x = Dropout(0.5)(self.features)
+        self.features = Dense(units=32, activation=self.activation)(x)
+        x = Dropout(0.4)(self.features)
         outputs = Dense(units=1, activation='linear')(x)
         model = Model(inputs, outputs, name='model2')
         return model
 
 
-class GRU:
+class GRU_model:
     def __init__(self, input_shape):
         self.features=None
         self.input_shape=input_shape
@@ -105,3 +107,17 @@ class GRU:
 
 
 
+class Combine_model:
+    def __init__(self,encoder, classification, lr=0.0001):
+        self.model1 = encoder.model
+        self.features=encoder.features
+        self.model2 = classification.model
+        self.lr = lr
+        self.model = self.build_model()
+        
+    def build_model(self):
+        combined_input = self.model1.input
+        output = self.model2(self.features)
+        combined_model = Model(inputs=combined_input, outputs=output, name='combined_model')
+        # combined_model.compile(optimizer=Adam(learning_rate=self.lr), loss='mae', metrics=['mae', r2])
+        return combined_model
