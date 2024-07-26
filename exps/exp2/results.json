@@ -1,0 +1,11 @@
+{
+    "lgbm": {"Train": {"Model": "LGBMRegressor", "MAE": 31.18243995761972, "R2": 0.9918002688280555, "Time": 7.89344334602356},
+            "Validation": {"Model": "LGBMRegressor", "MAE": 58.483404545474734, "R2": 0.957977792067213, "Time": 2.8726375102996826}, 
+            "Test": {"Model": "LGBMRegressor", "MAE": 85.75705609976056, "R2": 0.9111135121962156, "Time": 0.040065765380859375}},      
+    "decision_tree": {"Train": {"Model": "DecisionTreeRegressor", "MAE": 44.35944041063561, "R2": 0.9778215143459316, "Time": 1.4455785751342773}, 
+                    "Validation": {"Model": "DecisionTreeRegressor", "MAE": 72.50963971360844, "R2": 0.9339509568800978, "Time": 0.46275949478149414}, 
+                    "Test": {"Model": "DecisionTreeRegressor", "MAE": 94.48049845919502, "R2": 0.8900760416569016, "Time": 0.01100611686706543}},      
+    "xgboost": {"Train": {"Model": "XGBRegressor", "MAE": 154.74975296254826, "R2": 0.8131781076091433, "Time": 0.6012542247772217}, 
+                "Validation": {"Model": "XGBRegressor", "MAE": 173.55030551572582, "R2": 0.8149708855348679, "Time": 0.32456398010253906}, 
+                "Test": {"Model": "XGBRegressor", "MAE": 192.70752309773366, "R2": 0.7693778136050703, "Time": 0.058569908142089844}}
+}
