@@ -92,15 +92,15 @@ class GRU_model:
     def build_models(self):
         inputs = Input(shape=self.input_shape)
         x = GRU(units=128)(inputs) 
-        x = Dropout(0.2)(x)
+        x = Dropout(0.6)(x)
         x = Dense(units=256, activation='relu')(x)
         x = Dropout(0.5)(x)
         x = Dense(units=128, activation='relu')(x)
         x = Dropout(0.5)(x)
         x = Dense(units=64, activation='relu')(x)
-        x = Dropout(0.5)(x)
+        x = Dropout(0.4)(x)
         self.features = Dense(units=32, activation='relu')(x)
-        x = Dropout(0.5)(self.features)
+        x = Dropout(0.2)(self.features)
         outputs = Dense(units=1, activation='linear')(x)
         model = Model(inputs, outputs, name='model2')
         return model
